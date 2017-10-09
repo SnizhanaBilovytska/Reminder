@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{168CD385-601D-4E9B-A6F5-98CB7446EEC8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoffeeMachine\Ex1\Interface\ICoffemachine.cs" />
+    <Compile Include="CoffeeMachine\Ex1\SimpleCoffeeMachine.cs" />
+    <Compile Include="CoffeeMachine\Ex1\OfficeCoffeeMachine.cs" />
+    <Compile Include="Collections\Array.cs" />
+    <Compile Include="Collections\BlockingCollection.cs" />
+    <Compile Include="Collections\IComparer.cs" />
+    <Compile Include="Collections\LinkedList.cs" />
+    <Compile Include="Collections\Queue.cs" />
+    <Compile Include="Interesting\Abstract.cs" />
+    <Compile Include="Interesting\CancellationToken.cs" />
+    <Compile Include="Interesting\DelegatesEvents\Contrvariance.cs" />
+    <Compile Include="Interesting\DelegatesEvents\Delegate.cs" />
+    <Compile Include="Interesting\FinallyBlock.cs" />
+    <Compile Include="Interesting\GC.cs" />
+    <Compile Include="Interesting\Immutabl\Immutable.cs" />
+    <Compile Include="Interesting\Immutabl\Mutable.cs" />
+    <Compile Include="Interesting\Interf.cs" />
+    <Compile Include="Interesting\Params.cs" />
+    <Compile Include="Interesting\Partitioner.cs" />
+    <Compile Include="Interesting\Predicate.cs" />
+    <Compile Include="Interesting\StringBuilde.cs" />
+    <Compile Include="Interesting\Struct.cs" />
+    <Compile Include="Interesting\WeakRef.cs" />
+    <Compile Include="LinesOfCode\CalculateLinesOfCode.cs" />
+    <Compile Include="Collections\List.cs" />
+    <Compile Include="Patterns\State\OrdersState\Canceled.cs" />
+    <Compile Include="Patterns\State\OrdersState\NewOrder.cs" />
+    <Compile Include="Patterns\State\Order.cs" />
+    <Compile Include="Patterns\State\OrdersState\OrderState.cs" />
+    <Compile Include="Patterns\State\OrdersState\Shipped.cs" />
+    <Compile Include="Patterns\Strategy\Americano.cs" />
+    <Compile Include="Patterns\Strategy\CoffeeMachine.cs" />
+    <Compile Include="Patterns\Strategy\Interface\ICoffee.cs" />
+    <Compile Include="Patterns\Strategy\Latte.cs" />
+    <Compile Include="Patterns\TemplateMethod\MessageSearcher.cs" />
+    <Compile Include="Patterns\Visitor\ElectricitySystemValidator.cs" />
+    <Compile Include="Patterns\Visitor\Floor.cs" />
+    <Compile Include="Patterns\Visitor\Interfaces\IElement.cs" />
+    <Compile Include="Patterns\Visitor\Interfaces\IVisitor.cs" />
+    <Compile Include="Patterns\Visitor\OfficeBuilding.cs" />
+    <Compile Include="Patterns\Visitor\Room.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestAPI\Sender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Patterns\Command\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
